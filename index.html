@@ -1,0 +1,36 @@
+<html>
+    <head>
+<link rel="stylesheet" href="style.css">
+<title> My Family Book </title>
+    </head>
+    <body>
+        <h2> My Family Book </h2>
+        <img src="https://cdn4.vectorstock.com/i/1000x1000/97/48/happy-cartoon-father-mother-brother-and-sister-vector-20799748.jpg" style="width: 30%;" id="family_member_image">
+        <hr>
+        <h4 id="family_member_name"> our family </h4>
+        <hr>
+        <button onclick="update();"> Next </button>
+           <h4 id="button">  </h4>
+    </body>
+    <script>
+        var images =["https://cdn4.iconfinder.com/data/icons/family-cartoon/512/g10484-512.png",
+           "https://cdn4.iconfinder.com/data/icons/family-cartoon/512/g10485-512.png",
+           "https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190534185/122724605-little-girl-kid-character-vector-illustration-design.jpg?ver=6",
+           "https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190505227/122760736-little-girl-avatar-character-vector-illustration-design.jpg?ver=6"];
+           var names =["Alex G.","Natali G.","Xenia G.","Daryna G."];
+
+           var i=0;
+           function update() {
+               i++;
+               var number_of_family_members_in_array = 3
+               if(i > number_of_family_members_in_array) {
+                   i = 0;
+               }
+               var updatedImage = images[i];
+               var updatedName = names[i];
+               document.getElementById("family_member_image").src = updatedImage
+               document.getElementById("family_member_name").innerHTML = updatedName
+           }
+
+    </script>
+</html>
